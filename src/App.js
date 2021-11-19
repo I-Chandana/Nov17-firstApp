@@ -34,11 +34,11 @@ function App() {
   }
 
   return (
-    <div>
-      <p>{messages}</p>
-      <button onClick={connect}> Connect to MeataMask</button>
+    <div className="flex flex-col items-center justify-center">
+      <span className="mt-3 text-xl bg-yellow-100 p-1 rounded-sm"> Demo test connect to MetaMask</span>
+      <button className="py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800" onClick={connect}>Connect to MetaMask</button>
       {active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}
-      <button onClick={disconnect}></button>
+      <button className="py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800" onClick={disconnect}> Disconnect </button>
     </div>
   );
 }
